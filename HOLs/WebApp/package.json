@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "postinstall": "bower install"
+    "postinstall": "bower install",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "keywords": [],
   "author": "",
@@ -19,6 +21,8 @@
     "express": "4.16.0",
     "nconf": "0.8.4",
     "tedious": "1.14.0",
-    "tedious-connection-pool": "1.0.5"
-  }
+    "tedious-connection-pool": "1.0.5",
+    "snyk": "^1.189.0"
+  },
+  "snyk": true
 }
